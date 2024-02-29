@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #383838;
+}
+
+body {
+    background-color: #f7f7f7;
+    display: grid;
+    grid-template-areas: "header header"
+                           "aside main"
+                           "footer footer";
+    grid-template-columns: 0.7fr 3fr;
+    gap: 30px;
+    height: 100vh;
+    align-content: space-between;
+}
+
+body p {
+    color: #424242;
+}
+
+header, footer {
+    margin-bottom: 50px;
+    background-color: #e53935;
+    padding: 10px;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.borda {
+    width: 2px;
+    height: 25px;
+    color: #fff;
+}
+
+.logo-txt {
+    border-left: 2px solid #fff;
+    margin-left: 5px;
+    padding-left: 5px;
+    color: #ffff;
+}
+
+aside, main {
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    grid-area: main;
+    padding: 40px;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.categoria-container ul {
+    margin-left: 12px;
+}
+
+ul li::before {
+    content: '\2022';
+    color: #383838;
+    display: inline-block;
+    width: 1em;
+    margin-left: -0.5em;
+}
+
+
+.categoria-container li {
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: #f01b17;
+}
+
+a:hover {
+    color: #c01512;
+}
+
+.categoria-container {
+    border-bottom: 2px solid #f7f7f7;
+    padding: 20px;
+}
+
+.categoria-container:last-child {
+    border-bottom: none;
+}
+
+.categoria-container h2 {
+    margin-bottom: 20px;
+}
+
+footer {
+    padding: 20px;
+    /* height: 35%; */
+    text-align: center;
+    color: #fff;
+    grid-area: footer;
+    margin-bottom: 0;
+}
+
